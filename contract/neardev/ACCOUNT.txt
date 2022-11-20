@@ -1,0 +1,35 @@
+Starting deployment. Account id: dev-1668850776041-35423412707359, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 867g8BJr4hNgjbPkDa6o9YMFJxzKYDXR99fwHdQgk5ky
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/867g8BJr4hNgjbPkDa6o9YMFJxzKYDXR99fwHdQgk5ky
+Done deploying to dev-1668850776041-35423412707359
+
+
+
+
+=================================================================================================================================================================================================================================
+cpr@CPR:/mnt/d/Hackatoons/NEARMetaBUILDIIIHackathon/nearDirectDebit$ npm run deploy
+
+> nearDirectDebit@0.0.1 deploy
+> cd contract && npm run deploy
+
+
+> hello_near@1.0.0 deploy
+> ./deploy.sh
+
+>> Building contract
+[build] › …  awaiting  Creating build directory...
+…  awaiting  Validatig src/contract.ts contract...
+[build] › ✔  success   Generated build/hello_near.wasm contract successfully!
+>> Deploying contract
+Please help us to collect data on near-cli usage to improve developer experience.
+We will never send private information. We collect which commands are run with attributes, your account ID, and your country
+Note that your account ID and all associated on-chain transactions are already being recorded on public blockchain.
+
+Would you like to opt in (y/n)? y
+Starting deployment. Account id: dev-1668850776041-35423412707359, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 867g8BJr4hNgjbPkDa6o9YMFJxzKYDXR99fwHdQgk5ky
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/867g8BJr4hNgjbPkDa6o9YMFJxzKYDXR99fwHdQgk5ky
+Done deploying to dev-1668850776041-35423412707359
+=================================================================================================================================================================================================================================
