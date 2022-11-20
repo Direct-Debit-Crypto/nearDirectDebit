@@ -33,3 +33,176 @@ To see the transaction in the transaction explorer, please open this url in your
 https://explorer.testnet.near.org/transactions/867g8BJr4hNgjbPkDa6o9YMFJxzKYDXR99fwHdQgk5ky
 Done deploying to dev-1668850776041-35423412707359
 =================================================================================================================================================================================================================================
+>> Deploying contract
+Starting deployment. Account id: dev-1668850776041-35423412707359, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id BSuFYGkjm5PTsMUHfVJMSRJNBiDbFW6ZeubT1P7HSCDD
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/BSuFYGkjm5PTsMUHfVJMSRJNBiDbFW6ZeubT1P7HSCDD
+Done deploying to dev-1668850776041-35423412707359
+
+=================================================================================================================================================================================================================================
+
+>> Building contract
+[build] › …  awaiting  Creating build directory...
+…  awaiting  Validatig src/contract.ts contract...
+[build] › ✔  success   Generated build/hello_near.wasm contract successfully!
+[build] › …  awaiting  Creating build directory...
+…  awaiting  Validatig src/direct_debit.ts contract...
+[build] › ✔  success   Generated build/direct_debit.wasm contract successfully!
+>> Deploying contract
+Starting deployment. Account id: dev-1668850776041-35423412707359, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id J8BaJYeTTVJ9LbeyE2t8sJjYgKqMatZmsq3oPtRpzqcL
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/J8BaJYeTTVJ9LbeyE2t8sJjYgKqMatZmsq3oPtRpzqcL
+Done deploying to dev-1668850776041-35423412707359
+Starting deployment. Account id: dev-1668850776041-35423412707359, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id 7S8TQHe2nFbdN3qsrc1XvoyzHfDBSmDUx9rtMynBMvX7
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/7S8TQHe2nFbdN3qsrc1XvoyzHfDBSmDUx9rtMynBMvX7
+Done deploying to dev-1668850776041-35423412707359
+
+===============================================================================================
+
+>> Deploying contract
+Starting deployment. Account id: dev-1668944924720-36574412841063, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 7NmJb7Jn5W1GCNx6ALDg9CXoN1Pd1Lcs42JPjMrv8Q5p
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/7NmJb7Jn5W1GCNx6ALDg9CXoN1Pd1Lcs42JPjMrv8Q5p
+Done deploying to dev-1668944924720-36574412841063
+Starting deployment. Account id: dev-1668944924720-36574412841063, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id EdEtrVKM7qsQkp7anWYzSYtSLMNAPZNQTcmwxmMvfXQn
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/EdEtrVKM7qsQkp7anWYzSYtSLMNAPZNQTcmwxmMvfXQn
+Done deploying to dev-1668944924720-36574412841063
+
+===============================================================================================
+
+
+>> Building contract
+[build] › …  awaiting  Creating build directory...
+…  awaiting  Validatig src/contract.ts contract...
+[build] › ✔  success   Generated build/hello_near.wasm contract successfully!
+[build] › …  awaiting  Creating build directory...
+…  awaiting  Validatig src/direct_debit.ts contract...
+[build] › ✔  success   Generated build/direct_debit.wasm contract successfully!
+>> Deploying contract
+Starting deployment. Account id: dev-1668944924720-36574412841063, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 7NmJb7Jn5W1GCNx6ALDg9CXoN1Pd1Lcs42JPjMrv8Q5p
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/7NmJb7Jn5W1GCNx6ALDg9CXoN1Pd1Lcs42JPjMrv8Q5p
+Done deploying to dev-1668944924720-36574412841063
+Starting deployment. Account id: dev-1668944924720-36574412841063, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id EdEtrVKM7qsQkp7anWYzSYtSLMNAPZNQTcmwxmMvfXQn
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/EdEtrVKM7qsQkp7anWYzSYtSLMNAPZNQTcmwxmMvfXQn
+Done deploying to dev-1668944924720-36574412841063
+
+===============================================================================================
+
+
+
+
+>> Deploying contract
+Starting deployment. Account id: dev-1668946419237-19248254395814, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 2bJTjZkYsUDF3t2JzSf1jeuZucMiQp8rqUrbS5beBHts
+To see the transaction in the transaction explorer, please open this url in your browser   
+https://explorer.testnet.near.org/transactions/2bJTjZkYsUDF3t2JzSf1jeuZucMiQp8rqUrbS5beBHts
+Done deploying to dev-1668946419237-19248254395814
+>> Remove old variable
+/mnt/d/Hackatoons/NEARMetaBUILDIIIHackathon/nearDirectDebit/contract
+>> Deploying contract
+Starting deployment. Account id: dev-1668946441896-96518432031599, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id 5XVBwPKmRbtKk2V8imCp14txX8C5RLKsBdft8uzsmBF4
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/5XVBwPKmRbtKk2V8imCp14txX8C5RLKsBdft8uzsmBF4
+Done deploying to dev-1668946441896-96518432031599
+>> Remove old variable
+
+===============================================================================================
+
+
+>> Deploying contract
+Starting deployment. Account id: dev-1668948090380-90370811076804, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id E4X6K9PVG7uQsXX4LQKr2XxBiPbAmtxRZbKdQpxUKYsH
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/E4X6K9PVG7uQsXX4LQKr2XxBiPbAmtxRZbKdQpxUKYsH
+Done deploying to dev-1668948090380-90370811076804
+>> Remove old variable
+>> Deploying contract
+Starting deployment. Account id: dev-1668948113001-86515042835824, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id GGPQu4ayzZGrUjaU3YEKX1AFRiYVsTj4Am2TiJyEtYvZ
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/GGPQu4ayzZGrUjaU3YEKX1AFRiYVsTj4Am2TiJyEtYvZ
+Done deploying to dev-1668948113001-86515042835824
+>> Remove old variable
+
+
+
+===============================================================================================
+
+
+>> Deploying contract
+Starting deployment. Account id: dev-1668948991970-75515604942114, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 69VpYDetut79hwSDyLj2w69cMYgQaZDaL2DW8Hx9CUAL
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/69VpYDetut79hwSDyLj2w69cMYgQaZDaL2DW8Hx9CUAL
+Done deploying to dev-1668948991970-75515604942114
+>> Remove old variable
+>> Deploying contract
+Starting deployment. Account id: dev-1668949015166-17884274375278, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id E38MBgcBVM1KETTSwNrRYQvm8oGeR9LUsoMEGDXgfsv5
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/E38MBgcBVM1KETTSwNrRYQvm8oGeR9LUsoMEGDXgfsv5
+Done deploying to dev-1668949015166-17884274375278
+>> Remove old variable
+
+
+
+
+===============================================================================================
+
+
+>> Deploying contract
+Starting deployment. Account id: dev-1668949015166-17884274375278, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id CB7LXtHuHP3TKBYvdSD8RTjKpBhTaj1uXzo9ALYBcr8z
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/CB7LXtHuHP3TKBYvdSD8RTjKpBhTaj1uXzo9ALYBcr8z
+Done deploying to dev-1668949015166-17884274375278
+>> Remove old variable
+>> Deploying contract
+^BStarting deployment. Account id: dev-1668969382672-64107955659032, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id EhWbL51opjg7xUTAyVb9MiVSJ2ZzLrJE9cppBuEQQsy6
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/EhWbL51opjg7xUTAyVb9MiVSJ2ZzLrJE9cppBuEQQsy6
+Done deploying to dev-1668969382672-64107955659032
+>> Remove old variable
+
+
+
+===============================================================================================
+[build] › ✔  success   Generated build/direct_debit.wasm contract successfully!
+>> Deploying contract
+Starting deployment. Account id: dev-1668969591956-66397190615679, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/hello_near.wasm
+Transaction Id 7NDrez5F2YQrFuPDQEwxYDyg2iYDM3HD9TD6MDrg9CMN
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/7NDrez5F2YQrFuPDQEwxYDyg2iYDM3HD9TD6MDrg9CMN
+Done deploying to dev-1668969591956-66397190615679
+>> Remove old variable
+>> Deploying contract
+Starting deployment. Account id: dev-1668969614150-67063368219218, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: build/direct_debit.wasm
+Transaction Id 6B9Mb4ubB1TEyNjWjzRGE7QNgJSUqxfNLbmz6GV1mQuh
+To see the transaction in the transaction explorer, please open this url in your browser
+https://explorer.testnet.near.org/transactions/6B9Mb4ubB1TEyNjWjzRGE7QNgJSUqxfNLbmz6GV1mQuh
+Done deploying to dev-1668969614150-67063368219218
+>> Remove old variable
+===============================================================================================
+
+===============================================================================================
+
+===============================================================================================
+
+===============================================================================================
+
+===============================================================================================
+
+===============================================================================================
