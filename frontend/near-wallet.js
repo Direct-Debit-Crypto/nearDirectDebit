@@ -2,6 +2,7 @@
 
 // near api js
 import { providers } from 'near-api-js';
+var Buffer = require('buffer/').Buffer
 
 // wallet selector UI
 import '@near-wallet-selector/modal-ui/styles.css';
