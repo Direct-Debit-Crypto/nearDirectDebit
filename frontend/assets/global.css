@@ -329,3 +329,17 @@ main.please-wait .loader:after{
   vertical-align: center;
 }
 
+.alldirectdebit
+{
+  padding: 12px;
+  margin: 12px;
+  margin-top: 120px;
+}
+
+.newInvoice
+{
+  padding: 12px;
+  margin: 12px;
+  margin-top: 120px;
+}
+

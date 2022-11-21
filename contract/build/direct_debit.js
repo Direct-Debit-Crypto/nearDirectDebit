@@ -564,14 +564,6 @@ function promiseBatchCreate(accountId) {
 function promiseBatchActionTransfer(promiseIndex, amount) {
   env.promise_batch_action_transfer(promiseIndex, amount);
 }
-/**
- * Executes the promise in the NEAR WASM virtual machine.
- *
- * @param promiseIndex - The index of the promise to execute.
- */
-function promiseReturn(promiseIndex) {
-  env.promise_return(promiseIndex);
-}
 
 /**
  * Tells the SDK to use this function as the initialization function of the contract.
@@ -1148,7 +1140,7 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
     Assertions.isLeftGreaterThanRight(accountBalance(), amount, `Not enough balance ${accountBalance()} to send ${amount}`);
     const promise = promiseBatchCreate(receivingAccountId);
     promiseBatchActionTransfer(promise, amount);
-    promiseReturn(promise);
+    // near.promiseReturn(promise);
   }
   // ^^^^^^^^^^^^^^^^ HELPER FUNCTIONS ^^^^^^^^^^^^^^^^^^^^
 
@@ -1201,6 +1193,9 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
     this.internalSendNEAR(vendorAddress, this.vendorsInvoicesUsedLimit.get(vendorAddress, {
       defaultValue: BigInt(0)
     }));
+    this.treasure = this.treasure - BigInt(this.vendorsInvoicesUsedLimit.get(vendorAddress, {
+      defaultValue: BigInt(0)
+    }));
     this.vendorsInvoicesUsedLimit.set(vendorAddress, BigInt(0));
   }
   // This method changes the state, for which it cost gas
@@ -1224,6 +1219,9 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
           defaultValue: BigInt(0)
         }));
         this.vendorsInvoicesUsedLimit.set(address_vector, BigInt(0));
+        this.treasure = this.treasure - BigInt(this.vendorsInvoicesUsedLimit.get(address_vector, {
+          defaultValue: BigInt(0)
+        }));
       } else {
         log(`the amount will be paid to ${address_vector} as used limit is not bigger than 0`);
       }
@@ -1235,6 +1233,7 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
     assert(predecessorAccountId() == this.owner, "Only owner can add a new vendor");
     log(`withdraw_treasure called  ${amount}`);
     this.internalSendNEAR(this.owner, amount); //withdraw to owner only
+    this.treasure = this.treasure - BigInt(amount);
   }
 
   // ^^^^^^^^^^^^^^^^  CALL METHODS PAYABLE ^^^^^^^^^^^^^^^^^^^^
@@ -1262,6 +1261,7 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
       }
     }
     assert(whitelisted_poz >= 0, "Address not in vendor whitelist.");
+    log(`address ${vendorAddress}at pozition ${whitelisted_poz}.`);
     const amount_used_so_far = this.vendorsInvoicesUsedLimit.get(vendorAddress, {
       defaultValue: BigInt(0)
     });
@@ -1271,7 +1271,10 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
     }), "You have reach your limit");
     this.vendorsInvoicesUsedLimit.set(vendorAddress, new_amount_used);
     if (this.payLater == false) {
+      log(`address ${vendorAddress} will be paid ${amount_in}.`);
       this.internalSendNEAR(vendorAddress, amount_in);
+      this.treasure = this.treasure - BigInt(amount_in);
+      log(`vendor ${vendorAddress} paid ${amount_in}.`);
     }
   }
   // This method changes the state, for which it cost gas
@@ -1285,6 +1288,7 @@ let DirectDebit = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({
     validateAccountId(vendorAddress);
     this.vendorsList.push(vendorAddress);
     this.vendorsMaxLimit.set(vendorAddress, limitAmount);
+    log(`add_vendor added ${vendorAddress} with limit ${limitAmount}`);
   }
   // This method changes the state, for which it cost gas
   remove_vendor({

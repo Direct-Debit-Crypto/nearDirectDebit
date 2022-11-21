@@ -1,5 +1,6 @@
 
-import { NearBindgen, initialize, near, call, view, UnorderedMap, assert, Vector, validateAccountId } from 'near-sdk-js';
+import { NearBindgen, initialize, near, call, view, UnorderedMap, assert, Vector, validateAccountId, NearPromise } from 'near-sdk-js';
+import { AccountId } from 'near-sdk-js/lib/types'
 
 class Assertions {
     static hasAtLeastOneAttachedYocto() {
@@ -45,7 +46,7 @@ class DirectDebit {
         );
         const promise = near.promiseBatchCreate(receivingAccountId);
         near.promiseBatchActionTransfer(promise, amount);
-        near.promiseReturn(promise);
+        // near.promiseReturn(promise);
       }
     // ^^^^^^^^^^^^^^^^ HELPER FUNCTIONS ^^^^^^^^^^^^^^^^^^^^
 
@@ -98,6 +99,7 @@ class DirectDebit {
         validateAccountId(vendorAddress);
         near.log(`pay_vendor will pay ${this.vendorsInvoicesUsedLimit.get(vendorAddress, {defaultValue: BigInt(0)})}`);
         this.internalSendNEAR(vendorAddress, this.vendorsInvoicesUsedLimit.get(vendorAddress, {defaultValue: BigInt(0)}));
+        this.treasure = this.treasure - BigInt(this.vendorsInvoicesUsedLimit.get(vendorAddress, {defaultValue: BigInt(0)}));
         this.vendorsInvoicesUsedLimit.set(vendorAddress, BigInt(0));
     }
 
@@ -118,6 +120,7 @@ class DirectDebit {
             near.log(`the amount ${this.vendorsInvoicesUsedLimit.get(address_vector, {defaultValue: BigInt(0)})} will be paid to ${address_vector}`);
             this.internalSendNEAR(address_vector, this.vendorsInvoicesUsedLimit.get(address_vector, {defaultValue: BigInt(0)}))
             this.vendorsInvoicesUsedLimit.set(address_vector, BigInt(0));
+            this.treasure = this.treasure - BigInt(this.vendorsInvoicesUsedLimit.get(address_vector, {defaultValue: BigInt(0)}));
           }
           else
           {
@@ -131,6 +134,7 @@ class DirectDebit {
         assert(near.predecessorAccountId() == this.owner, "Only owner can add a new vendor");
         near.log(`withdraw_treasure called  ${amount}`);
         this.internalSendNEAR(this.owner, amount); //withdraw to owner only
+        this.treasure = this.treasure - BigInt(amount);
     }
 
     // ^^^^^^^^^^^^^^^^  CALL METHODS PAYABLE ^^^^^^^^^^^^^^^^^^^^
@@ -160,6 +164,8 @@ class DirectDebit {
         }
         assert(whitelisted_poz >= 0, "Address not in vendor whitelist.");
         
+        near.log(`address ${vendorAddress}at pozition ${whitelisted_poz}.`);
+        
         const amount_used_so_far = this.vendorsInvoicesUsedLimit.get(vendorAddress, {defaultValue: BigInt(0)});
         const new_amount_used = amount_used_so_far + amount_in;
         assert(new_amount_used <= this.vendorsMaxLimit.get(vendorAddress, {defaultValue: BigInt(0)}) ,"You have reach your limit");
@@ -167,7 +173,10 @@ class DirectDebit {
 
         if(this.payLater == false)
         {
+            near.log(`address ${vendorAddress} will be paid ${amount_in}.`);
             this.internalSendNEAR(vendorAddress, amount_in)
+            this.treasure = this.treasure - BigInt(amount_in);
+            near.log(`vendor ${vendorAddress} paid ${amount_in}.`);
         }
 
 
@@ -184,6 +193,7 @@ class DirectDebit {
         
       this.vendorsList.push(vendorAddress);
       this.vendorsMaxLimit.set(vendorAddress, limitAmount)
+      near.log(`add_vendor added ${vendorAddress} with limit ${limitAmount}`);
     }
 
     @call({}) // This method changes the state, for which it cost gas

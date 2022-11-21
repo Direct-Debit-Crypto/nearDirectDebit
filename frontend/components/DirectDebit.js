@@ -215,7 +215,7 @@ export function DirectDebit({contractIdIn, walletIn}) {
 
 
     return (
-    <Layout wallet={walletIn}>
+    <>
         {loaded==false?
         <>
             <h1>Loading...</h1>
@@ -270,6 +270,6 @@ export function DirectDebit({contractIdIn, walletIn}) {
             </form>
         </>
         }
-    </Layout>
+    </>
     );
   }

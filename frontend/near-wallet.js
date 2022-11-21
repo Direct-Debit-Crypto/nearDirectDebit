@@ -59,6 +59,13 @@ export class Wallet {
     modal.show();
   }
 
+  // // Sign-in method
+  // addAccessKey({accesKey}) {
+  //   const description = 'Please select a wallet to sign in.';
+  //   const modal = setupModal(this.walletSelector, { contractId: accesKey, description });
+  //   modal.show();
+  // }
+
   // Sign-out method
   signOut() {
     this.wallet.signOut();
