@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { BrowserRouter } from "react-router-dom";
 
 //DIRECT DEBIT 
 const DIRECT_DEBIT_CONTRACT_ADDRESS = 'dev-1668970976367-68686872023814'
@@ -20,7 +21,11 @@ window.onload = async () => {
   const isSignedIn = await wallet.startUp()
  
   ReactDOM.render(
-    <App isSignedIn={isSignedIn} contractId={DIRECT_DEBIT_CONTRACT_ADDRESS} wallet={wallet} />,
+    <React.StrictMode>
+     <BrowserRouter>
+        <App isSignedIn={isSignedIn} contractId={DIRECT_DEBIT_CONTRACT_ADDRESS} wallet={wallet} />
+    </BrowserRouter>
+    </React.StrictMode>,
     document.getElementById('root')
   );
 }

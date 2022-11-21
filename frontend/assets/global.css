@@ -34,6 +34,7 @@ main.please-wait {
 
 h1 {
   background-image: url(./logo-black.svg);
+  vertical-align: center;
   background-position: center 1em;
   background-repeat: no-repeat;
   background-size: auto 1.5em;
@@ -137,6 +138,7 @@ button {
   color: #efefef;
   cursor: pointer;
   padding: 0.3em 0.75em;
+  margin: 12px;
   transition: transform 30ms;
 }
 button:hover, button:focus {
@@ -176,6 +178,7 @@ li {
   }
   h1 {
     background-image: url(./logo-white.svg);
+    vertical-align: center;
   }
   input:focus {
     box-shadow: 0 0 10em rgba(255, 255, 255, 0.02) inset;
@@ -229,3 +232,100 @@ main.please-wait .loader:after{
     transform: rotate(360deg);
   }
 }
+
+.inputDirectDebit{
+  margin: 12px;
+}
+
+.header * {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline
+}
+
+.allnav a:hover {
+  background-color: #DEF5E5;
+  color: black;
+} 
+
+
+
+.headerLogo{
+  padding: 10px;
+} 
+
+.header {
+  overflow: hidden;
+  float: left;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.header * {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline
+}
+
+
+.header a {
+  color: #000000;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.allnav a:hover {
+  background-color: #DEF5E5;
+  color: var(--shadow);
+}
+
+.allnav a.active {
+  background-color: #8EC3B0;
+  color: rgb(0, 0, 0);
+}
+
+.header-right {
+  float: right;
+}
+
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #8D9EFF;
+  background-color:  var(--light-gray);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+
+.main {
+  min-height: 80vh;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  padding: 4rem 0;
+  color: var(--secondary);
+  background: #000000;
+  background-color: #DEF5E5;
+  align-items: center;
+  text-align: center;
+  vertical-align: center;
+}
+

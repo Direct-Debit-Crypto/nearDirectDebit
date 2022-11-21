@@ -2,20 +2,20 @@ import React from 'react';
 
 export function SignInPrompt({greeting, onClick}) {
   return (
-    <main>
+    <main className='main'>
       <h1>
-        The contract says: <span className="greeting">{greeting}</span>
+        DIRECT DEBIT NEAR DAPP
       </h1>
       <h3>
-        Welcome to NEAR!
+        Welcome to Direct Debit NEAR!
       </h3>
       <p>
-        Your contract is storing a greeting message in the NEAR blockchain. To
-        change it you need to sign in using the NEAR Wallet. It is very simple,
-        just use the button below.
+        Your contract is storing a list of whitelisted vendors and pays them when they emit an invoice.
+        This is an MVP(Minimum Viable Product) and should be treated as such.
+        Use it at your own will.
       </p>
       <p>
-        Do not worry, this app runs in the test network ("testnet"). It works
+        This app runs in the test network ("testnet"). It works
         just like the main network ("mainnet"), but using NEAR Tokens that are
         only for testing!
       </p>
